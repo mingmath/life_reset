@@ -3,21 +3,33 @@
 <head>
     <title>Life Reset</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 確保畫面比例正確，禁止縮放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     
-    <!-- 完美全螢幕與 Icon 設定 -->
+    <!-- 綁定 App 身分證 (強制全螢幕的關鍵) -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple 專屬全螢幕與 Icon 設定 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Life Reset">
     <link rel="apple-touch-icon" href="https://dummyimage.com/512x512/e84393/ffffff.png&text=LR">
     
     <style>
-        /* 讓外殼完全貼合螢幕，不留白邊 */
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f4f7f6; }
-        iframe { width: 100%; height: 100%; border: none; }
+        /* 讓外殼完全貼合螢幕，包含瀏海與動態島區域 */
+        body, html { 
+            margin: 0; padding: 0; height: 100vh; overflow: hidden; 
+            background-color: #f4f7f6; 
+        }
+        iframe { 
+            width: 100%; height: 100%; border: none; 
+            /* 避開 iPhone 底部的橫條 (Home Indicator) */
+            padding-bottom: env(safe-area-inset-bottom);
+        }
     </style>
 </head>
 <body>
-    <!-- 請把下面 src 裡面的網址，換成您真正的 Google Apps Script 網址 -->
+    <!-- ⚠️ 請務必確認這裡是您最新的 Google Apps Script 網址 -->
     <iframe src=https://script.google.com/macros/s/AKfycbx8kx5PQh0tStFsFsjH-WDstxqKiyyM2__Oe9BU3VNQuvI0HShH3cR7JLa7cNphfR_R/exec></iframe>
 </body>
 </html>
