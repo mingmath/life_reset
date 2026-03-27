@@ -1,0 +1,14 @@
+{
+  "name": "Life Reset",
+  "short_name": "Life Reset",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#e84393",
+  "icons":[
+    {
+      "src": "https://dummyimage.com/512x512/e84393/ffffff.png&text=LR",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
